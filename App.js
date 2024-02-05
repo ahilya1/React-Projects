@@ -21,7 +21,7 @@ root.render(jsxheading)*/
 //React Element
 const heading = <h1>This is React Element</h1>
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(heading)
+root.render(heading) //we render react element here not a component
 
 // React Component
 //React functional component
