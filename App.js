@@ -20,13 +20,14 @@ root.render(jsxheading)*/
 
 //React Element
 const heading = <h1>This is React Element</h1>
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(heading) //we render react element here not a component
+/*const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(heading)*///we render react element here not a component
 
+//const data= api.getdata()
 // React Component
 //React functional component
 
-const HeadingComponent = ()=>{
+const HeadingComponent =function(){
     return(
         <div>
             <h1 className='heading'>This is functional component</h1>
@@ -36,9 +37,16 @@ const HeadingComponent = ()=>{
 
 const HeadingComponent2 =()=>(
     <div>
+       {HeadingComponent()}
+       <HeadingComponent/>
+       <HeadingComponent></HeadingComponent>
+        {heading}
+       {/* /\ {data} */}
         <h1>This is heading component2</h1>
     </div>
 )
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<HeadingComponent2/>)
 //both above are same code
 
 
@@ -66,7 +74,7 @@ const HeadingComponent2 =()=>(
 //                ),
 //                React.createElement("div",{id:"child2"},
 //                [
-//                React.createElement("h1",{},"kadkfskdsjfdkfjkldfsds tag"),
+//                React.createElement("h1",{},"kadkfskdsjfdkfjkldfsds  tag"),
 //                React.createElement("h2",{},"I am in h2 tag"),
 //                ]
 //                )
